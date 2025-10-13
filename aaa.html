@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://i.ibb.co.com/hXZsYxZ/heart.png" />
+    <title>happy birthday sayangg🩷</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        min-height: 100%;
+      }
+      body {
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #444;
+        font-family: "Poppins", sans-serif;
+        overflow: hidden;
+        min-height: 100vh;
+      }
+      .page {
+        background-color: rgba(255, 255, 255, 0.4);
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 1s ease;
+      }
+      .page.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      h1,
+      h2 {
+        color: #4d4d4d;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .highlight {
+        color: #5e5e5e;
+        font-weight: bold;
+      }
+      .button {
+        background-color: #f0dada;
+        color: #5e5e5e;
+        border: none;
+        border-radius: 25px;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin-top: 30px;
+        transition: background 0.3s;
+      }
+      .button:hover {
+        background-color: #e5c7c7;
+      }
+      img {
+        max-width: 70vw;
+        max-height: 50vh;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); hapus ini */
+      }
+
+      .letter {
+        white-space: pre-line;
+        font-size: 1.1rem;
+        max-width: 600px;
+        text-align: left;
+        border-left: 3px solid #c49b9b;
+        padding-left: 15px;
+        min-height: 200px;
+        color: #4e4e4e;
+        max-height: 300px;
+        overflow-y: auto;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+      .falling {
+        position: fixed;
+        top: -30px;
+        font-size: 24px;
+        animation: fall linear infinite;
+        pointer-events: none;
+        z-index: 9999;
+      }
+      @keyframes fall {
+        to {
+          transform: translateY(120vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          background-attachment: scroll;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+        .button {
+          padding: 10px 20px;
+          font-size: 1rem;
+        }
+        .letter {
+          font-size: 1rem;
+          max-height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PAGE 1 -->
+    <div class="page active" id="page1">
+      <img src="1a.gif" alt="Cute Icon" />
+      <h1>haiii sayangkuuuu!🩷</h1>
+      <button class="button" onclick="goToPage('page2')">tap disinii ‹𝟹</button>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page" id="page2">
+      <img src="2.gif" alt="Envelope" />
+      <p>are u readyy to open thissss?</p>
+      <div class="buttons">
+        <button class="button" onclick="goToPage('page3')">sure bby</button>
+        <button class="button" onclick="goToPage('pageNo')">
+          mmm no sowwy
+        </button>
+      </div>
+    </div>
+
+    <!-- PAGE NO -->
+    <div class="page" id="pageNo">
+      <img src="no.gif" alt="Oops No" />
+      <p>ihhh, iseng mulu, tap SURE BBY sekarang juga 😡💗</p>
+      <div class="buttons">
+        <button class="button" onclick="goToPage('page2')">back</button>
+      </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page" id="page3">
+      <img src="3.gif" alt="Love Note" />
+      <p>
+        yeayy terimakasih sudah menjawab SURE!!! last one i made something for u
+        sayang, read it slowly yaaa ..
+      </p>
+      <button class="button" onclick="goToPage('page4')">okee sayang</button>
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page" id="page4">
+      <img src="4.gif" alt="Just Us" />
+      <h1>happy birthday sayang!</h1>
+      <p>
+        selamat ulang tahun, cintaku… terima kasih udah jadi alasan aku
+        tersenyum setiap hari, semoga semua hal baik selalu datang padamu <3
+      </p>
+      <button class="button" onclick="goToPage('page5')">
+        aku nulis sesuatu yang spesial bgt buat kamuuu 💌
+      </button>
+    </div>
+
+    <!-- PAGE 5 -->
+    <div class="page" id="page5" style="font-family: 'Montserrat', sans-serif">
+      <div style="text-align: center; margin-top: 15px">
+        <img
+          src="5.gif"
+          alt="foto"
+          style="
+            width: 80%;
+            max-width: 280px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+          "
+        />
+      </div>
+      <h2 style="text-align: center">a wish for u on ur birthday 🥹🫶🏻</h2>
+      <div class="letter" id="letterText"></div>
+    </div>
+
+    <audio id="bg-music" src="dewa.mp3" autoplay loop muted></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+      const fullLetter = `yeyy hari ini kamu officially tambah tua 🥳 (dan hopefully tambah sabar ngadepin aku hehe 😆).  
+
+i just wanna say thank you, for being you — for existing, for staying, for trying 💖  
+ga gampang nemu orang yang bisa bikin aku ngerasa senyaman itu, se-aman itu.  
+tapi somehow, kamu bisa. dan itu bukan hal kecil buat aku 🤍  
+
+aku suka cara kamu jadi diri kamu sendiri — chaotic, clueless, capek, tapi masih nyempetin waktu buat nyenengin aku 🙂  
+you’re not perfect, but honestly? you're exactly what i need 💫  
+thank you for choosing me, every day.  
+
+makasii udah sabar banget, udah mau dengerin, nemenin, dan jadi tempat pulang yang aku ga tau aku butuh, sampe kamu dateng 🏡  
+aku tau kamu cape, banyak hal di kepala kamu yang kamu ga selalu ceritain.  
+tapi please inget, i’m here 🤍  
+bukan cuma buat nemenin di hari yang seru, tapi juga di hari yang kamu ngerasa paling sendiri.  
+you don’t have to go through this life alone.  
+i got you. always.  
+
+buat umur kamu yang baru ini, i hope you grow kinder to yourself 🌱  
+lebih sayang diri sendiri, lebih proud sama semua hal kecil yang udah kamu capai.  
+you deserve the kind of love you always give to people — termasuk yang kamu kasih ke aku 💕  
+
+aku ga bisa janji semuanya bakal mudah ke depannya,  
+tapi selama kamu masih pengen jalan bareng aku,  
+aku di sini. mau ngelewatin bareng, satu per satu 🌈  
+
+so, happy birthday ya, sayang 🎂  
+semoga di setiap langkahmu selalu ada kebahagiaan, keberanian, dan cinta yang tulus mengiringi ✨  
+semoga kamu selalu merasa dicintai — bukan cuma sama aku, tapi juga sama hidup itu sendiri 💗  
+i love u so much bb🩷  
+
+with all my love,  
+nadira cantikk ˶ᵔ ᵕ ᵔ˶  
+`;
+
+      function goToPage(pageId) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach((p) => p.classList.remove("active"));
+        const next = document.getElementById(pageId);
+        next.classList.add("active");
+
+        if (pageId === "page5") {
+          const music = document.getElementById("bg-music");
+          music.muted = false;
+          music.play().catch((e) => console.log("Autoplay blocked:", e));
+
+          confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+          typeText(fullLetter, document.getElementById("letterText"), 75);
+          startFallingSymbols();
+        }
+      }
+
+      function typeText(text, element, speed) {
+        element.innerHTML = "";
+        let i = 0;
+        function type() {
+          if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            element.scrollTop = element.scrollHeight;
+            i++;
+            setTimeout(type, speed);
+          }
+        }
+        type();
+      }
+
+      function startFallingSymbols() {
+        const symbols = ["💗", "✨"]; // campuran love dan shine
+        setInterval(() => {
+          const el = document.createElement("div");
+          el.classList.add("falling");
+          el.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+          el.style.left = Math.random() * 100 + "vw";
+          el.style.fontSize = "24px";
+          el.style.animation = `fall ${3 + Math.random() * 2}s linear forwards`;
+          document.body.appendChild(el);
+          setTimeout(() => el.remove(), 6000);
+        }, 300);
+      }
+    </script>
+  </body>
+</html>
